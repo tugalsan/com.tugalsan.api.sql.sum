@@ -1,5 +1,6 @@
 package com.tugalsan.api.sql.sum.server;
 
+import com.tugalsan.api.log.server.TS_Log;
 import com.tugalsan.api.pack.client.*;
 import com.tugalsan.api.sql.conn.server.*;
 import com.tugalsan.api.sql.sanitize.server.*;
@@ -7,6 +8,8 @@ import com.tugalsan.api.sql.select.server.*;
 import com.tugalsan.api.sql.where.server.*;
 
 public class TS_SQLSumExecutor {
+
+    public static TS_Log d = TS_Log.of(TS_SQLSumExecutor.class);
 
     public TS_SQLSumExecutor(TS_SQLConnAnchor anchor, CharSequence tableName, CharSequence columnName) {
         this.anchor = anchor;
@@ -27,7 +30,9 @@ public class TS_SQLSumExecutor {
         if (where != null) {
             sb.append(" ").append(where);
         }
-        return sb.toString();
+        var stmt = sb.toString();
+        d.ci("toString", stmt);
+        return stmt;
     }
 
     public Long execute() {
