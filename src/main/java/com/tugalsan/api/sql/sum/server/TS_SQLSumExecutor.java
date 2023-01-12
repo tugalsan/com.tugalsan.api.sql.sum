@@ -9,7 +9,7 @@ import com.tugalsan.api.sql.where.server.*;
 
 public class TS_SQLSumExecutor {
 
-    public static TS_Log d = TS_Log.of(TS_SQLSumExecutor.class);
+    final public static TS_Log d = TS_Log.of(TS_SQLSumExecutor.class);
 
     public TS_SQLSumExecutor(TS_SQLConnAnchor anchor, CharSequence tableName, CharSequence columnName) {
         this.anchor = anchor;

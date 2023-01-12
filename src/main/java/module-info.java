@@ -1,6 +1,7 @@
 module com.tugalsan.api.sql.sum {
     requires java.sql;
     requires com.tugalsan.api.pack;
+    requires com.tugalsan.api.log;
     requires com.tugalsan.api.executable;
     requires com.tugalsan.api.sql.sanitize;
     requires com.tugalsan.api.sql.select;
