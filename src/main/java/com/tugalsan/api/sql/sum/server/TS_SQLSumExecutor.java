@@ -26,7 +26,7 @@ public class TS_SQLSumExecutor {
     public String toString() {
         TS_SQLSanitizeUtils.sanitize(columnName);
         TS_SQLSanitizeUtils.sanitize(tableName);
-        var sb = new StringBuilder().append("SELECT COUNT(").append(columnName).append(") ").append(" FROM ").append(tableName);
+        var sb = new StringBuilder().append("SELECT SUM(").append(columnName).append(") ").append(" FROM ").append(tableName);
         if (where != null) {
             sb.append(" ").append(where);
         }
