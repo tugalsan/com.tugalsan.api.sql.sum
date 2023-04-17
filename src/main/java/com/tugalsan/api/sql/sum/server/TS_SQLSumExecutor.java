@@ -35,7 +35,7 @@ public class TS_SQLSumExecutor {
         return stmt;
     }
 
-    public Long execute() {
+    public Long run() {
         TGS_Pack1<Long> pack = new TGS_Pack1();
         TS_SQLSelectStmtUtils.select(anchor, toString(), fillStmt -> {
             if (where != null) {
