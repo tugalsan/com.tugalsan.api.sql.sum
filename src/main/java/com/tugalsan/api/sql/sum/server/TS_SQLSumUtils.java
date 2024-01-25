@@ -8,9 +8,10 @@ public class TS_SQLSumUtils {
         return new TS_SQLSum(anchor, tableName, columnName);
     }
 
-    public static void test() {
-        var sum = TS_SQLSumUtils
-                .sum(null, "tn", "cn")
-                .whereConditionAnd(conditions -> conditions.lngEq("", 0));
-    }
+//    public static void test() {
+//        var sum = TS_SQLSumUtils
+//                .sum(null, "tn", "cn")
+//                .whereConditionAnd(conditions -> conditions.lngEq("", 0));
+//        out.println(sum);
+//    }
 }

@@ -9,7 +9,7 @@ public class TS_SQLSum {
     public TS_SQLSum(TS_SQLConnAnchor anchor, CharSequence tableName, CharSequence columnName) {
         this.executor = new TS_SQLSumExecutor(anchor, tableName, columnName);
     }
-    private TS_SQLSumExecutor executor;
+    private final TS_SQLSumExecutor executor;
 
     public long whereGroupAnd(TGS_RunnableType1<TS_SQLWhereGroups> groups) {
         executor.where = TS_SQLWhereUtils.where();
